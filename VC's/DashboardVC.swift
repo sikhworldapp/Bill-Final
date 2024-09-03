@@ -46,7 +46,7 @@ class DashboardVC: BaseViewController {
     
     @IBAction func actionLogout(_ sender: Any) {
         appConstants.clearUserDefaults {
-            let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let homeVC = storyboard.instantiateViewController(withIdentifier: "Home") as? Home {
                 let navigationController = UINavigationController(rootViewController: homeVC)
                 navigationController.modalPresentationStyle = .fullScreen

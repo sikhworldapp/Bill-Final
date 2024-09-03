@@ -257,7 +257,7 @@ extension RegistrationForm: UITextFieldDelegate
                        else
                        {
                            DispatchQueue.main.async{
-                               let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
+                               let storyboard = UIStoryboard(name: "Main", bundle: nil)
                                if let newViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC {
                                    newViewController.modalPresentationStyle = .fullScreen // or .overFullScreen for a transparent background
                                    present(newViewController, animated: true, completion: nil)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DashboardProductsVC: UIViewController {
+class DashboardProductsVC: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblTotalAmount: UILabel!
@@ -192,9 +192,25 @@ class DashboardProductsVC: UIViewController {
               }
           }
     }
+    
     @IBAction func actionChooseDate(_ sender: Any) {
-        
-    }
+           let datePickerVC = DatePickerViewController()
+           
+           // Present as a bottom sheet modal
+           if let sheet = datePickerVC.sheetPresentationController {
+               sheet.detents = [.medium()] // Present as a medium height bottom sheet
+               sheet.preferredCornerRadius = 16 // Optional: Rounded corners for the sheet
+           }
+           
+           datePickerVC.onDateSelected = { [weak self] selectedDate in
+               let dateFormatter = DateFormatter()
+               dateFormatter.dateStyle = .medium
+               let dateString = dateFormatter.string(from: selectedDate)
+               self?.btnDateSelecting.setTitle(dateString, for: .normal)
+           }
+           
+           present(datePickerVC, animated: true, completion: nil)
+       }
     
 }
 
@@ -260,3 +276,46 @@ extension DashboardProductsVC : UITableViewDataSource, UITableViewDelegate
 }
 
 
+
+class DatePickerViewController: UIViewController {
+
+    var datePicker: UIDatePicker!
+    var onDateSelected: ((Date) -> Void)?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .yellow
+        // Setup the date picker
+        datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(datePicker)
+        
+        // Setup the toolbar with a "Done" button
+        let toolbar = UIToolbar()
+        toolbar.translatesAutoresizingMaskIntoConstraints = false
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePressed))
+        toolbar.setItems([doneButton], animated: false)
+        
+        view.addSubview(toolbar)
+        
+        // Layout constraints for the date picker and toolbar
+        NSLayoutConstraint.activate([
+            datePicker.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            datePicker.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            datePicker.topAnchor.constraint(equalTo: view.topAnchor),
+            
+            toolbar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            toolbar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            toolbar.topAnchor.constraint(equalTo: datePicker.bottomAnchor),
+            toolbar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
+    
+    @objc func donePressed() {
+        onDateSelected?(datePicker.date)
+        dismiss(animated: true, completion: nil)
+    }
+}

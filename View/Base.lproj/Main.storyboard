@@ -14,7 +14,7 @@
         <!--UpdateProductVC-->
         <scene sceneID="4Ac-WB-df6">
             <objects>
-                <viewController storyboardIdentifier="UpdateProductNetworkVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vIv-bY-Frb" userLabel="UpdateProductVC" customClass="UpdateProductNetworkVC" customModule="Sanjay_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UpdateProductNetworkVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vIv-bY-Frb" userLabel="UpdateProductVC" customClass="UpdateProductNetworkVC" customModule="BillingSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="skb-lI-vAz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -233,7 +233,7 @@
         <!--LoginVC-->
         <scene sceneID="o2R-wF-ZlT">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jUI-To-hvc" customClass="LoginVC" customModule="Sanjay_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jUI-To-hvc" customClass="LoginVC" customModule="BillingSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6YE-i1-NJR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -323,7 +323,7 @@
         <!--Dashboard Products-->
         <scene sceneID="XS0-qf-blZ">
             <objects>
-                <viewController storyboardIdentifier="DashboardProductsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LKd-s8-flJ" customClass="DashboardProductsVC" customModule="Sanjay_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardProductsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LKd-s8-flJ" customClass="DashboardProductsVC" customModule="BillingSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jDn-yE-XNr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -339,6 +339,7 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Date">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <imageReference key="image" image="calendar" catalog="system" symbolScale="large"/>
                                         </state>
                                         <connections>
@@ -548,7 +549,7 @@
         <!--DashboardVC-->
         <scene sceneID="giB-1B-5Lc">
             <objects>
-                <viewController storyboardIdentifier="DashboardVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sEr-9F-ry5" customClass="DashboardVC" customModule="Sanjay_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sEr-9F-ry5" customClass="DashboardVC" customModule="BillingSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hCb-Dh-fYs">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -606,9 +607,9 @@
                     <connections>
                         <outlet property="collectionView" destination="vSU-yL-NjO" id="lXX-S7-IQs"/>
                         <outlet property="lblUserName" destination="35F-me-WZA" id="hTV-uz-iMT"/>
-                        <segue destination="d0q-IH-hGY" kind="show" identifier="toAddItem" id="06Y-CN-mb1"/>
                         <segue destination="AfU-p9-idu" kind="show" identifier="toList" id="IAc-ez-GRz"/>
                         <segue destination="LKd-s8-flJ" kind="show" identifier="toBilling" id="hV9-QL-X9C"/>
+                        <segue destination="Qi3-U7-ehl" kind="show" identifier="toAddItem" id="FZk-N4-x1D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="67S-vy-Ntz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -618,7 +619,7 @@
         <!--Add item-->
         <scene sceneID="8MX-su-Wxw">
             <objects>
-                <viewController storyboardIdentifier="AddNewProductNetworkVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qi3-U7-ehl" customClass="AddNewProductNetworkVC" customModule="Sanjay_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddNewProductNetworkVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qi3-U7-ehl" customClass="AddNewProductNetworkVC" customModule="BillingSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ejd-H8-xzk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -772,7 +773,7 @@
         <!--Registration Form-->
         <scene sceneID="T2b-jA-wFw">
             <objects>
-                <viewController id="bx4-Fm-hn0" customClass="RegistrationForm" customModule="Sanjay_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bx4-Fm-hn0" customClass="RegistrationForm" customModule="BillingSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hzB-fK-hTT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -874,7 +875,7 @@ EEVudGVyIHVzZXJuYW1lA
         <!--Choose ProductVC-->
         <scene sceneID="1U5-A2-8WT">
             <objects>
-                <viewController storyboardIdentifier="ChooseProductVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0ru-0w-PDh" customClass="ChooseProductVC" customModule="Sanjay_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChooseProductVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0ru-0w-PDh" customClass="ChooseProductVC" customModule="BillingSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A1b-uL-9n3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1039,7 +1040,7 @@ EEVudGVyIHVzZXJuYW1lA
         <!--List Products From ServerVC-->
         <scene sceneID="znR-9K-5BT">
             <objects>
-                <viewController storyboardIdentifier="ListProductsFromServerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AfU-p9-idu" customClass="ListProductsFromServerVC" customModule="Sanjay_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListProductsFromServerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AfU-p9-idu" customClass="ListProductsFromServerVC" customModule="BillingSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LCQ-WX-kmu">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1130,7 +1131,7 @@ EEVudGVyIHVzZXJuYW1lA
         <!--Add DiscountVC-->
         <scene sceneID="56s-nb-Yp6">
             <objects>
-                <viewController storyboardIdentifier="AddDiscountVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iSG-r7-wJv" customClass="AddDiscountVC" customModule="Sanjay_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddDiscountVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iSG-r7-wJv" customClass="AddDiscountVC" customModule="BillingSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V8l-gg-RuE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1188,7 +1189,7 @@ EEVudGVyIHVzZXJuYW1lA
                                         <rect key="frame" x="20" y="131" width="353" height="84"/>
                                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductCell" id="tVy-Nc-UYz" customClass="ProductCell" customModule="Sanjay_Project" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductCell" id="tVy-Nc-UYz" customClass="ProductCell" customModule="BillingSystem" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="50" width="353" height="51.666667938232422"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tVy-Nc-UYz" id="TEF-E9-fqC">
@@ -1291,7 +1292,7 @@ EEVudGVyIHVzZXJuYW1lA
         <!--Home-->
         <scene sceneID="u33-Tx-ghC">
             <objects>
-                <viewController storyboardIdentifier="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wyy-d4-VW7" customClass="Home" customModule="Sanjay_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wyy-d4-VW7" customClass="Home" customModule="BillingSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gjE-3g-Apn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1366,20 +1367,21 @@ EEVudGVyIHVzZXJuYW1lA
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="lCh-Q9-Te1"/>
+        <segue reference="5e1-Lq-4BX"/>
         <segue reference="iQy-7w-QC4"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.down.circle" catalog="system" width="128" height="123"/>
-        <image name="calendar" catalog="system" width="32" height="32"/>
+        <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="cross" width="128" height="128"/>
-        <image name="eye.slash" catalog="system" width="32" height="32"/>
-        <image name="plus" catalog="system" width="32" height="32"/>
-        <image name="plus.circle" catalog="system" width="32" height="32"/>
+        <image name="eye.slash" catalog="system" width="128" height="95"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="plus.circle" catalog="system" width="128" height="123"/>
         <namedColor name="accentColor">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.6589999794960022" green="0.89800000190734863" blue="0.40400001406669617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="commonBackgroundColor">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.86500000953674316" green="1" blue="0.83300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
